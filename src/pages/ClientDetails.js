@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import ProgressBar from "../components/ProgressBar";
-import AddNewFile from "../components/AddNewFile";
+import { Outlet, useParams } from "react-router-dom";
 import ClientCard from "../components/ClientInfo";
-import FolderList from "../components/FolderDetails";
+import StudioServiceNavigation from "../components/ServiceNav";
+import CloudCard from "../components/cloudUpload";
 
-const ClientDetails = () => {
-  const { id } = useParams();
-
-  // Use random data for demonstration purposes
   const clientData = {
     clientId: "894390",
     projectName: "Punam Weds Pankaj",
@@ -21,26 +16,15 @@ const ClientDetails = () => {
     venue: "Patliputra Marriage Lawn",
   };
 
-  return (
-    <div className="p-4">
-      <ClientCard clientData={clientData} />
+const ClientDetails = () => {
+  const { id } = useParams();
+  // Use random data for demonstration purposes
 
-      <div className="border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
-        <div className="flex justify-between items-center">
-          <h2>
-            <strong>Add New</strong>
-          </h2>
-          <div>
-            <span className="font-bold">Total Uploaded </span>: 28.92 GB
-          </div>
-        </div>
-        <div className="my-3">
-          <AddNewFile />
-          <ProgressBar />
-        </div>
-        <div className="w-[100%] h-[1px] my-8 border-dashed border-b-[1px]  border-black-700"></div>
-        <FolderList />
-      </div>
+
+  return (
+    <div className="px-3 pb-3">
+    <StudioServiceNavigation />
+      <Outlet />
     </div>
   );
 };

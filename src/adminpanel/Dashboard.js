@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 // const BASEURL = "http://localhost:4040/";
 
-const Dashboard = () => {
+const AdminDashboard = () => {
   const navigate = useNavigate();
 
   const data = [
@@ -80,7 +80,7 @@ const Dashboard = () => {
                     7050020659
                   </td>
                   <td className="py-2 px-6 text-sm text-gray-700">
-                    <NavLink to={`/123456/client-info`}>
+                    <NavLink to={`/client-info`}>
                       <button className="rounded-md py-2 ring-2 ring-red-300 ring-inset bg-red-800 px-4 text-white">
                         View
                       </button>
@@ -96,4 +96,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default AdminDashboard;

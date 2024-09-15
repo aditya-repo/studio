@@ -1,8 +1,22 @@
 import React from "react";
 
-const ClientCard = ({ clientData }) => {
+  // Use random data for demonstration purposes
+  const clientData = {
+    clientId: "894390",
+    projectName: "Punam Weds Pankaj",
+    type: "Wedding",
+    bookingdate: "19-07-2023",
+    date: "12-06-2023",
+    clientName: "Aditya Raj",
+    address: "70 Feet Road, Patna - 800002",
+    contact: "7050020659",
+    venue: "Patliputra Marriage Lawn",
+  };
+
+
+const ClientCard = () => {
   return (
-    <div className="bg-white shadow rounded-lg overflow-hidden mb-5">
+    <div className="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
       <div className="px-4 py-4 sm:px-6">
         <h3 className="text-base font-semibold leading-7 text-gray-900">
           {clientData.clientName}

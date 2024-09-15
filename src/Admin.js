@@ -1,20 +1,20 @@
 import React from 'react'
-import Header from './components/Header'
-import Sidebar from './components/Sidebar'
 import { Outlet } from 'react-router-dom'
+import AdminSidebar from './adminpanel/Component/Sidebar'
+import AdminHeader from './adminpanel/Component/Header'
 
-const Layout = () => {
+const Admin = () => {
     return (
         <div class="flex h-screen">
             <div class="bg-gray-800 w-64 h-screen fixed">
-                <Sidebar />
+                <AdminSidebar />
             </div>
             <div class="flex-1 ml-64 overflow-y-auto">
-                <Header />
+                <AdminHeader />
                 <Outlet />
             </div>
         </div>
     )
 }
 
-export default Layout
+export default Admin
